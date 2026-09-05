@@ -1,3 +1,4 @@
+from src.data.Users import Users
 
 class LoggedInScreen:
 
@@ -541,9 +542,12 @@ class LoggedInScreen:
 
     #finds user and prints ascii art
     @staticmethod
-    def printAsciiArt(user):
-        index = 0
-        for x in LoggedInScreen.strawhatArtString:
-            if x == user:
-                print(LoggedInScreen.strawhatArt[index])
-            index = index + 1
+    def returnAsciiArt(index):
+        index = index -1
+        return LoggedInScreen.strawhatArt[index]
+
+    #prints one of the set ascii arts
+    @staticmethod
+    def  printAsciiArt(username):
+        print(Users.strawhats[username]["loginScreen"])
+

@@ -12,6 +12,7 @@ class MainMenu:
 
     #Main Menu method for the main menu of the program
     def mainMenu(error=False): #error is true when the user puts a wrong option
+        os.system("cls")
         print()
         print("=======STRAW HAT PIRATES DATABASE=======")
         print()
@@ -24,11 +25,10 @@ class MainMenu:
             os.system("cls")
             LoginMenu.loginMenu()
         elif choice == "2":
-            RegisterMenu.registerMenu()
+            RegisterMenu().registerMenu()
             print(Users.getUsers())
         elif choice == "3":
             print("Thanks for using the program!")
             SystemExit(0)
         else:
-            os.system("cls")
             MainMenu.mainMenu(True)
