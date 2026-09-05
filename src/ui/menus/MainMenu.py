@@ -1,4 +1,6 @@
 import os
+import sys
+
 from src.ui.menus.LoginMenu import LoginMenu
 from src.ui.menus.RegisterMenu import RegisterMenu
 from src.data.Users import Users
@@ -29,6 +31,6 @@ class MainMenu:
             print(Users.getUsers())
         elif choice == "3":
             print("Thanks for using the program!")
-            SystemExit(0)
+            sys.exit(0)
         else:
             MainMenu.mainMenu(True)
